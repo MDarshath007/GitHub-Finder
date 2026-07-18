@@ -1,3 +1,4 @@
+const token = import.meta.env.VITE_GITHUB_TOKEN;
 const API_KEY = "https://api.github.com"
 
 export const searchUsers = async (text) => {
@@ -6,7 +7,13 @@ export const searchUsers = async (text) => {
 }
 
 export const getUsers = async (username) => {
-    const res = await fetch(`${API_KEY}/users/${username}`);
+    const res = await fetch(`${API_KEY}/users/${username}`,
+      {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+    );
     if(!res.ok){
       throw new Error("404 error: user not found")
     }
