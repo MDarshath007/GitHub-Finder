@@ -32,6 +32,8 @@ function Home() {
         <Searchbar />
       </div>
 
+      <h1>Popular Users</h1>
+
       {loading ? (
         <div className="text-center mt-5">
           <div className="spinner-border text-primary" role="status">
