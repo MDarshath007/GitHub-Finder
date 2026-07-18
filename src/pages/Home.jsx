@@ -32,7 +32,7 @@ function Home() {
         <Searchbar />
       </div>
 
-      <h1>Popular Users</h1>
+      <h1 className="text-center">Popular Users</h1>
 
       {loading ? (
         <div className="text-center mt-5">
