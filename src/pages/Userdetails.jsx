@@ -63,7 +63,7 @@ function Userdetails() {
               <h1 className="m-0">{userDetails?.name || "No name available"}</h1>
               <h5 className="m-0">{userDetails?.login || "No username available"}</h5>
               <button className="GitHub-btn my-2 px-2">
-                <a className="bi bi-github list m-0"> GitHub</a>
+                <a className="bi bi-github list m-0" href={userDetails?.html_url}> GitHub</a>
               </button>
               <li className="bi bi-star list"> {userDetails?.bio || "No bio available"}</li>
               <li className="bi bi-geo-alt list"> {userDetails?.location || "No location available"} </li>
