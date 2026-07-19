@@ -62,7 +62,6 @@ function Home() {
                     {user.user_view_type}
                   </p>
                   <a
-                    href={user.html_url}
                     className="btn btn-primary view-profile"
                     onClick={() => {
                       navigate(`/user/${user.login}`);
